@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-
-require './lib/bollywood'
+# require "bundler/setup"
+# require "bollywood"
+require "./lib/bollywood"
 
 Bollywood::CLI.new.call

@@ -1,7 +1,18 @@
-class Celebrity::Movie
+class Bollywood::Movie
+  attr_accessor :name, :cast, :synopsis, :url
 
-  def celebrity_name
-     puts "You will be given a prompt to type the movie's and the Cast & Synopsis  will appear
+  URL = "http://www.imdb.com/"
+
+  def initialize(name, cast, synopsis, url)
+    @name = name
+    @cast = cast
+    @synopsis = synopsis
+    @url = url
   end
-  
+
+  def self.movie_prompt
+     puts "Type the name of the movie: #{name}."
+     input = gets.strip
+  end
+
 end
