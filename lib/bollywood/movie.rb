@@ -10,9 +10,5 @@ class Bollywood::Movie
     @url = url
   end
 
-  def self.movie_prompt
-     puts "Type the name of the movie: #{name}."
-     input = gets.strip
-  end
-
+  
 end

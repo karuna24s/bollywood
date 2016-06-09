@@ -25,15 +25,19 @@ class Bollywood::CLI
       input = gets.strip.downcase
       case input
       when "1"
-        @movies = Bollywood::Movie.movie_prompt
+        puts "Type the name of the movie:"
+        input = gets.strip.downcase
+        #@movies = Bollywood::Movie.movie_prompt
         # puts "You will be given a prompt to type the movie's and the Cast & Synopsis  will appear"
       when "2"
-        @celebrities = Bollywood::Celebrity.celebrity_prompt
+        puts "Type the name of the celebrity:"
+        input = gets.strip.downcase
+        #@celebrities = Bollywood::Celebrity.celebrity_prompt
         # puts "You will be given a prompt to type the celebrity's name and the Filmography will appear"
       when "list"
         list_options
-      else
-        puts "Not sure what you want, type list or exit."
+      # else
+      #   puts "Not sure what you want, type list or exit."
       end
     end
   end

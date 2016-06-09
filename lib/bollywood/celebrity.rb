@@ -9,8 +9,4 @@ class Bollywood::Celebrity
     @url = url
   end
 
-  def self.celebrity_prompt
-    puts "You will be given a prompt to type the celebrity's name and the Filmography will appear"
-  end
-
 end
