@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["karuna24s"]
   spec.email         = ["karuna24s@gmail.com"]
 
-  spec.summary       = %q{A CLI gem providing information about Bollywood movies and celebrities.}
-  spec.description   = %q{A CLI gem providing information about Bollywood movies and celebrities.}
+  spec.summary       = %q{A CLI gem providing information about Bollywood movies.}
+  spec.description   = %q{A CLI gem providing information about Bollywood movies.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

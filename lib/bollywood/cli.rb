@@ -8,36 +8,37 @@ class Bollywood::CLI
   end
 
   def welcome
-    puts "Welcome to the Bollywood CLI Gem:"
+    puts "Welcome to the Bollywood CLI Gem Where You Can Learn About the Upcoming Movies!"
   end
 
   def list_options
-    puts <<-DOC.gsub /^\s*/, ''
-      1. Would you like to learn more about a Bollywood movie?
-      2. Would you like to learn more about a Bollyword celebrity?
-    DOC
+    Bollywood::Movie.all.each.with_index(1) do |movie, q|
+      puts "#{1}. #{movie.name}"
+    end
+  end
+
+  def print_movie(movie)
+    puts "#{movie.name}"
+    puts movie.cast
+    puts movie.release_date
   end
 
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number to learn more, type list to see the options, or type exit."
+      puts "Select which movie you would like to learn about either by typing name or number."
+      puts "Type menu to see the list of movies again, or type exit to end the program."
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Type the name of the movie:"
-        input = gets.strip.downcase
-        #@movies = Bollywood::Movie.movie_prompt
-        # puts "You will be given a prompt to type the movie's and the Cast & Synopsis  will appear"
-      when "2"
-        puts "Type the name of the celebrity:"
-        input = gets.strip.downcase
-        #@celebrities = Bollywood::Celebrity.celebrity_prompt
-        # puts "You will be given a prompt to type the celebrity's name and the Filmography will appear"
-      when "list"
+      if input.to_i == 0
+        if movie = Bollywood::Movie.find_by_name(input)
+          print_movie(movie)
+        end
+      elsif input.to_i > 0
+        if movie = Bollywood::Movie.find(input.to_i)
+          print_movie(movie)
+        end
+      elsif input == "menu"
         list_options
-      # else
-      #   puts "Not sure what you want, type list or exit."
       end
     end
   end
@@ -45,6 +46,8 @@ class Bollywood::CLI
   def phir_milenge
     puts "Phir Milenge -> See You Soon!"
   end
+
+
 
 
 end
