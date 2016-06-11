@@ -3,4 +3,5 @@
 # require "bollywood"
 require "./lib/bollywood"
 
+#binding.pry
 Bollywood::CLI.new.call

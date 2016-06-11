@@ -9,15 +9,16 @@ Steps to Create A CLI GEM - Bollywood
 7. Discover objects
 8. Program
 
-- A command line interface for checking out more information about Bollywood movies such as the cast/credits, ratings and synopis
-- Also be able to show the filmography of a Bollywood celebrity
+- A command line interface for checking out more information about Bollywood movies such as the cast and release dates.
 
 user types bollywood
 
-Provide a menu for the user:
-1. Check out the cast/credits and more information about a particular movie.
-2. Check out the filmography of a particular celebrity.
+CLL welcomes the user and provides a list of Upcoming Movie Releases for the user:
 
-1
+User will receive a prompt asking -> Which movie would you like to learn more about?
 
-Which movie would you like to learn more about?
+User selects the number
+
+Then the name of the movie, cast and release date should appear.
+
+User will receive an option, to review the list, or exit.
