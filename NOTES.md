@@ -9,7 +9,7 @@ Steps to Create A CLI GEM - Bollywood
 7. Discover objects
 8. Program
 
-- A command line interface for checking out more information about Bollywood movies such as the cast and release dates.
+- A command line interface for checking out more information about Bollywood movies such as the cast, release dates and synopsis.
 
 user types bollywood
 
@@ -19,6 +19,6 @@ User will receive a prompt asking -> Which movie would you like to learn more ab
 
 User selects the number
 
-Then the name of the movie, cast and release date should appear.
+Then the name of the movie, cast, and release date should appear. Some movies may have a synopsis and if it doesn't have a synposis. Then we a prompt will let the user know that there is no synopsis.
 
 User will receive an option, to review the list, or exit.

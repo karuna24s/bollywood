@@ -5,8 +5,7 @@ class Movie
 
   # URL = "http://www.bollywoodmdb.com/movies/"
 
-  def initialize#(name = nil)
-    #@name = name
+  def initialize
     @@all << self
   end
 
