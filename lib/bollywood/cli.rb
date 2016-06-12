@@ -1,26 +1,38 @@
-class Bollywood::CLI
+class CLI
 
   def call
     welcome
-    list_options
+    list_movies
     menu
     phir_milenge
   end
 
   def welcome
-    puts "Welcome to the Bollywood CLI Gem Where You Can Learn About the Upcoming Movies!"
+    puts ""
+    puts "************* Welcome to the Bollywood CLI Gem Where You Can Learn About the Upcoming Movies! *************"
+    puts ""
   end
 
-  def list_options
-    Bollywood::Scraper.all.each.with_index(1) do |movie, i|
-      puts "#{i}. #{movie.name}"
+  def list_movies
+    Movie.scrape_data
+    Movie.all.each.with_index(1) do |movie, i|
+      if i <= 20
+        puts "#{i}. #{movie.name}"
+      end
     end
+    puts ""
   end
 
   def print_movie(movie)
-    puts "#{movie.name}"
+    puts ""
+    puts  "-------------- #{movie.name} --------------"
+    puts ""
     puts movie.cast
+    puts ""
     puts movie.release_date
+    puts ""
+    puts movie.synopsis
+    puts ""
   end
 
   def menu
@@ -30,11 +42,11 @@ class Bollywood::CLI
       puts "Type menu to see the list of movies again, or type exit to end the program."
       input = gets.strip.downcase
       if input.to_i > 0
-        if movie = Bollywood::Scraper.find(input.to_i)
+        if movie = Movie.find(input.to_i)
            print_movie(movie)
         end
       elsif input == "menu"
-        list_options
+        list_movies
       else
         puts "Not sure what you want? Type menu or exit." unless input == "exit"
       end
@@ -46,8 +58,3 @@ class Bollywood::CLI
   end
 
 end
-
-# if input.to_i == 0
-#   if movie = Bollywood::Movie.find_by_name(input)
-#     print_movie(movie)
-#   end

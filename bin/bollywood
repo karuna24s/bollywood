@@ -4,4 +4,4 @@
 require "./lib/bollywood"
 
 #binding.pry
-Bollywood::CLI.new.call
+CLI.new.call
