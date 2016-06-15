@@ -1,4 +1,4 @@
-class Movie
+class Bollywood::Movie
   attr_accessor :name, :cast, :release_date, :synopsis
 
   @@all = []
@@ -22,7 +22,7 @@ class Movie
     # Remove google ads from doc
     doc.css(".mob_a").remove
     doc.css("div.row.move-data.spacer").each do |m|
-      movie = Movie.new
+      movie = Bollywood::Movie.new
       # Prevent the name of the movie from being repeated twice.
       #movie.name.slice!((movie.name.length/2)..movie.name.length)
       movie.name = m.css("a.movie-link").first.text

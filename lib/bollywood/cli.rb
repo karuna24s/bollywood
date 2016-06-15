@@ -1,4 +1,4 @@
-class CLI
+class Bollywood::CLI
   def call
     welcome
     list_movies
@@ -13,8 +13,8 @@ class CLI
   end
 
   def list_movies
-    Movie.scrape_data
-    Movie.all.each.with_index(1) do |movie, i|
+    Bollywood::Movie.scrape_data
+    Bollywood::Movie.all.each.with_index(1) do |movie, i|
       if i <= 20
         puts "#{i}. #{movie.name}"
       end
@@ -41,7 +41,7 @@ class CLI
       puts "Type menu to see the list of movies again, or type exit to end the program."
       input = gets.strip.downcase
       if input.to_i > 0
-        if movie = Movie.find(input.to_i)
+        if movie = Bollywood::Movie.find(input.to_i)
            print_movie(movie)
         end
       elsif input == "menu"
@@ -51,7 +51,7 @@ class CLI
       end
     end
   end
-  
+
   def phir_milenge
     puts "Phir Milenge -> See You Soon!"
   end
