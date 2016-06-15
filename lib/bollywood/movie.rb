@@ -23,9 +23,9 @@ class Movie
     doc.css(".mob_a").remove
     doc.css("div.row.move-data.spacer").each do |m|
       movie = Movie.new
-      movie.name = m.css("a.movie-link").first.text
       # Prevent the name of the movie from being repeated twice.
       #movie.name.slice!((movie.name.length/2)..movie.name.length)
+      movie.name = m.css("a.movie-link").first.text
       # Created an array to iterate the cast members of a movie correctly with a
       # space between each name.
       casts = []

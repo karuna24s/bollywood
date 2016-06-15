@@ -1,5 +1,4 @@
 class CLI
-
   def call
     welcome
     list_movies
@@ -52,9 +51,8 @@ class CLI
       end
     end
   end
-
+  
   def phir_milenge
     puts "Phir Milenge -> See You Soon!"
   end
-
 end
