@@ -1,8 +1,6 @@
 # Bollywood
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bollywood`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my Bollywood CLI gem! This gem will scrape a list of Upcoming Movies from Bollywoodmdb and you will be able to choose the movie learn more about that particular film including cast, release-date and synopsis. I built this gem as a project for the Flatiron School's Learn Verified Full Stack Web Development online program and I hope you enjoy it!
 
 ## Installation
 
@@ -38,4 +36,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
