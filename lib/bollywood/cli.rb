@@ -8,7 +8,7 @@ class Bollywood::CLI
 
   def welcome
     puts ""
-    puts "************* Welcome to the Bollywood CLI Gem Where You Can Learn About the Upcoming Movies! *************"
+    puts "********** Welcome to the Bollywood CLI Gem Where You Can Learn About the Upcoming Movies! **********"
     puts ""
   end
 
