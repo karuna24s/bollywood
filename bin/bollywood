@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # require "bundler/setup"
 # require "bollywood"
-require "./lib/bollywood"
+require_relative "../lib/bollywood"
 
 #binding.pry
 Bollywood::CLI.new.call

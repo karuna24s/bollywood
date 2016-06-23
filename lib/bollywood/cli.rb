@@ -13,7 +13,7 @@ class Bollywood::CLI
   end
 
   def list_movies
-    Bollywood::Movie.scrape_data
+    Bollywood::Scraper.scrape_data
     Bollywood::Movie.all.each.with_index(1) do |movie, i|
       if i <= 20
         puts "#{i}. #{movie.name}"
